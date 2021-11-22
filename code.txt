@@ -1,0 +1,19 @@
+SPACING = 2
+START_RAD = 1
+NUM_ARCS = 200
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(50);
+  
+  for (let i = 0; i < NUM_ARCS; i++){
+    arcpoint1 = random(0, TWO_PI)
+    arcpoint2 = random(0, TWO_PI)
+    stroke(180)
+    noFill();
+    arc(200, 200, START_RAD+(i*SPACING), START_RAD+(i*SPACING), arcpoint1, arcpoint2);
+  }
+}
