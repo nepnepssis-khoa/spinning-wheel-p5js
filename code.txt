@@ -1,18 +1,18 @@
-SPACING = 2
-START_RAD = 1
-NUM_ARCS = 200
+SPACING = 20
+START_RAD = 20
+NUM_ARCS = 20
+THICKNESS = 7
 
 function setup() {
   createCanvas(400, 400);
-}
-
-function draw() {
-  background(50);
+  
+  background(150)
   
   for (let i = 0; i < NUM_ARCS; i++){
     arcpoint1 = random(0, TWO_PI)
     arcpoint2 = random(0, TWO_PI)
-    stroke(180)
+    stroke(random(0,255), random(0,255), random(0,255))
+    strokeWeight(THICKNESS)
     noFill();
     arc(200, 200, START_RAD+(i*SPACING), START_RAD+(i*SPACING), arcpoint1, arcpoint2);
   }
